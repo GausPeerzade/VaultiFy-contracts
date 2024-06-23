@@ -1,3 +1,4 @@
+//THIS CONTRACT IS NOT COMPLETED YET BECAUSE IT NEED INTEGRATING OTHER LENDING PROTOCOL TO WORK 
 #[cfg(not(feature = "library"))]
 use cosmwasm_std::entry_point;
 use cosmwasm_std::{
