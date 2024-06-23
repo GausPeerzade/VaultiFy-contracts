@@ -1,4 +1,4 @@
-//THIS CONTRACT IS NOT COMPLETED YET BECAUSE IT NEED INTEGRATING OTHER LENDING PROTOCOL TO WORK 
+//THIS CONTRACT IS NOT COMPLETED  BECAUSE IT NEEDS INTEGRATING WITH LENDING PROTOCOL WHERE WE CAN DEPOSIT RWA TOKENS 
 #[cfg(not(feature = "library"))]
 use cosmwasm_std::entry_point;
 use cosmwasm_std::{
@@ -167,6 +167,8 @@ fn execute_deposit(
 
     let c_swap2: CosmosMsg = swap_msg2.into();
 
+    // HERE WE WILL INTEGRATE WITH LENDING PROTOCOL TO CREATE A DELTA NEUTRAL POSITION
+
     Ok(Response::new()
         .add_message(allow1)
         .add_message(allow2)
@@ -273,6 +275,8 @@ fn execute_withdraw(
     };
 
     let c_swap2: CosmosMsg = swap_msg2.into();
+
+    // HERE WE WILL INTEGRATE WITH LENDING PROTOCOL TO REMOVE LIQUIIDTY FROM OUR DELTA NEUTRAL STRAT
 
     Ok(Response::new()
         .add_message(allow1)
